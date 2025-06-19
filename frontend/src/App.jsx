@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 function App() {
   const [jokes, setjokes] = useState([])
   useEffect(()=>{
-    axios.get('/api/jokes')
+    axios.get(`${process.env.VITE_API_BASE_URL}/api/jokes`)
     .then((response)=>{
       setjokes(response.data)
     })
