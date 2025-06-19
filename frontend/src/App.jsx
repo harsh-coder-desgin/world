@@ -7,15 +7,15 @@ import { useEffect } from 'react'
 
 function App() {
   const [jokes, setjokes] = useState([])
-  useEffect(()=>{
-    axios.get('api/jokes')
-    .then((response)=>{
-      setjokes(response.data)
-    })
-    .catch((error)=>{
-      console.log(error);
-    })
-  })
+  useEffect(() => {
+    axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/jokes`)
+      .then((response) => {
+        setjokes(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []); // ⬅️ Don't forget this empty dependency array to avoid infinite requests
 
   return (
     <>
