@@ -10,3 +10,7 @@ export default defineConfig({
   },
   plugins: [react()],
 })
+
+// https://world-alpha.vercel.app
+
+// https://world-dvq9.vercel.app/api/jokes
