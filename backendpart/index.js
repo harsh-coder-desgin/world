@@ -1,10 +1,18 @@
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
 // app.use(express.static('dist'))
 // app.get('/',(req,res)=>{
 //     res.send('server');
 // })
+
+
+//  ✅ Enable CORS for frontend dev URL
+app.use(cors({
+  origin: 'http://localhost:5173', // or ['http://localhost:5173', 'https://your-frontend.vercel.app']
+  credentials: true, // only if using cookies
+}));
 app.get('/api/jokes',(req,res)=>{
 const jokes = [
   {
