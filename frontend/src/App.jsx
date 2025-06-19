@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 function App() {
   const [jokes, setjokes] = useState([])
   useEffect(()=>{
-    axios.get('https://world-dvq9.vercel.app/api/jokes')
+    axios.get('/api/jokes')
     .then((response)=>{
       setjokes(response.data)
     })
