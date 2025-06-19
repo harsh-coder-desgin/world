@@ -36,7 +36,7 @@ const jokes = [
 res.send(jokes);
 })
 
-const port = process.env.PORT || 3000;
+const port = "https://world-alpha.vercel.app";
 
 app.listen(port,()=>{
     console.log(`Server at http://localhost:${port}`);
